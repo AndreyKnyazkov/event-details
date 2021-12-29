@@ -153,6 +153,7 @@
   color: #484848;
 }
 .event-information__info__whatsthat {
+  margin-left: -1px;
   margin-top: 18px;
   font-size: 16px;
   color: #169688;
@@ -251,7 +252,7 @@
 }
 .event-information__price__slider__when__dates {
   display: flex;
-  margin-top: 8px;
+  margin-top: 9px;
 }
 .event-information__price__slider__when__dates__datelist-item,
 .event-information__price__slider__when__weekdaylist-item,
