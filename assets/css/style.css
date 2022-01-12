@@ -480,6 +480,9 @@
 .event-information__info__tagsmobile {
   display: none;
 }
+.event-information__info__buttonmobile {
+  display: none
+}
 @media (max-width: 1200px) {
   .event-cover__img, .event-cover__img img {
     width: 650px;
