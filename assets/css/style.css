@@ -47,10 +47,12 @@
 .event-cover__info__date {
   font-size: 16px;
   font-weight: 400;
+  line-height: 22px;
   color: #000;
 }
 .event-cover__info__time,
 .event-cover__info__duration {
+  line-height: 22px;
   font-size: 16px;
   font-weight: 400;
 }
@@ -59,6 +61,7 @@
 }
 .event-cover__info__more {
   margin-top: 2px;
+  line-height: 22px;
 }
 .event-cover__info__duration {
   margin-top: 2px;
@@ -67,10 +70,12 @@
 .event-cover__info__duration span {
   font-weight: 600;
 }
-.event-cover__info__more {
+.event-cover__info__more,
+.event-cover__info__more:hover,
+.event-cover__info__more:visited {
   font-size: 16px;
   font-weight: 400;
-  color: #169688;
+  color: #169688!important;
 }
 .event-cover__info__tags {
   display: flex;
@@ -82,6 +87,7 @@
   color: #169688;
   margin-right: 4px;
   margin-top: 1px;
+  line-height: 22px;
 }
 .event-information {
   display: flex;
@@ -91,6 +97,7 @@
   margin-left: 14px;
 }
 .event-information__price__info {
+  line-height: 22px;
   font-size: 16px;
   margin-top: 8px;
 }
@@ -106,6 +113,7 @@
   border-bottom: 1px solid #DCDBDB;
 }
 .event-information__price__lessons {
+  line-height: 22px;
   font-size: 16px;
   margin-top: 7px;
   font-weight: 600;
@@ -114,6 +122,7 @@
   margin-top: 7px;
 }
 .event-information__price__prices-price {
+  line-height: 22px;
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
@@ -148,6 +157,7 @@
 .event-information__price__title {
   font-size: 16px;
   font-weight: 600;
+  line-height: 24px;
   color: #4A525D;
 }
 .event-information__info__title {
@@ -160,9 +170,16 @@
 .event-information__info__whatsthat {
   margin-left: -1px;
   margin-top: 18px;
+  line-height: 22px;
   font-size: 16px;
   color: #169688;
   font-weight: 600;
+}
+.event-information__info__forwhom__people__class {
+  line-height: 22px;
+}
+.event-information__info__forwhom__lang__langs {
+  line-height: 22px;
 }
 .event-information__info__forwhom {
   display: flex;
@@ -291,6 +308,7 @@
   color: #169688;
   font-size: 16px;
   margin-left: 12px;
+  line-height: 22px;
 }
 .event-information__where__geo {
   display: flex;
@@ -304,6 +322,7 @@
 }
 .event-information__where__geo__extrainfo {
   margin-top: 11px;
+  line-height: 22px;
   margin-left: -2px;
   font-size: 16px;
 }
@@ -616,6 +635,7 @@
   }
   .event-information__info__title {
     display: flex;
+    line-height: 30px;
   }
   .event-information__info__buttonmobile a,
   .event-information__info__buttonmobile a:hover,
@@ -656,6 +676,7 @@
   .event-information__info__tagsmobile {
     margin-top: 15px;
     display: flex;
+    line-height: 22px;
     flex-wrap: wrap;
     padding-top: 17px;
     border-top: 1px solid #DBE0E0;
@@ -686,6 +707,7 @@
     font-weight: 600;
     margin-top: -14px;
     margin-bottom: -19px;
+    line-height: 22px;
   }
   .event-information__info__forwhom__slidermobile {
     margin-top: 20px;
@@ -695,21 +717,31 @@
   .event-information__info__forwhom__slidermobile .swiper-slide,
   .event-information__info__forwhom__slidermobile .swiper-slide img {
     max-height: 235px;
+    width: 100%;
     object-fit: cover;
   }
   .swiper-mobile {
     position: relative;
-    width: 352px;
+    max-width: 400px;
     overflow: hidden;
   }
   .swiper-mobile .swiper-button-prev {
+    position: initial;
     background-image: url();
-    left: 10px;
-    right: auto;
+    transform: translateX(10px);
   }
   .swiper-mobile .swiper-button-next {
+    position: initial;
     background-image: url();
-    right: 20px;
-    left: auto;
+    transform: translateX(-10px);
+  }
+  .swiper-mobile-arrows {
+    /* position: relative; */
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    z-index: 5;
+    display: flex;
+    justify-content: space-between;
   }
 }
