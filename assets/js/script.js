@@ -31,7 +31,16 @@ document.addEventListener("DOMContentLoaded", function () {
       },
 	 		loop: true,
 			loopedSlides: 4,
-      initialSlide: initialSlide ? initialSlide : 0
+      initialSlide: initialSlide ? initialSlide : 0,
+    });
+
+
+    document.querySelectorAll('.gallery-thumbs-counter span')[0].textContent = galleryTop.realIndex + 1
+    document.querySelectorAll('.gallery-thumbs-counter span')[1].textContent = document.querySelectorAll('.event-information__price__slider-slide').length + 1
+
+    galleryTop.on('slideChange', function () {
+      document.querySelectorAll('.gallery-thumbs-counter span')[0].textContent = galleryTop.realIndex + 1
+      console.log(galleryTop)
     });
   
     let galleryThumbs = new Swiper('.gallery-thumbs', {
@@ -42,7 +51,12 @@ document.addEventListener("DOMContentLoaded", function () {
       slideToClickedSlide: true,
       loop: true,
       loopedSlides: 4,
-      initialSlide: initialSlide ? initialSlide : 0
+      initialSlide: initialSlide ? initialSlide : 0,
+      on: {
+        // slideChange: function () {
+        //   document.querySelectorAll('.gallery-thumbs-counter span')[0].textContent = galleryTop.realIndex + 1
+        // }
+      }
     });
   
     galleryTop.controller.control = galleryThumbs;
@@ -59,7 +73,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }, 260);
     }
   }
-  
   
 
   function popUp() {

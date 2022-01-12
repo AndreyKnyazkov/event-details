@@ -283,14 +283,17 @@
 .event-information__price__slider__when__weekdaylist-item,
 .event-information__price__slider__when__timelist-item {
   margin-top: 8px;
+  line-height: 22px;
 }
 .event-information__price__slider__when__dates__datelist-item {
   margin-right: 25px;
   font-size: 16px;
+  line-height: 22px;
   color: #484848;
 }
 .event-information__price__slider__when__weekdaylist-item {
   font-size: 16px;
+  line-height: 22px;
   color: #484848;
   margin-right: 16px;
 }
@@ -567,6 +570,13 @@
 .event-information__info__buttonmobile {
   display: none
 }
+.gallery-thumbs-counter {
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+  transform: translateY(7px);
+  text-align: center;
+}
 @media (max-width: 1200px) {
   .event-cover__img, .event-cover__img img {
     width: 650px;
@@ -687,6 +697,7 @@
   }
   .event-information__price__slider__when__weekdaylist-item {
     display: none;
+    line-height: 22px;
   }
   .event-information__price__slider__when__weekdaylist-item-mobile {
     margin-top: 8px;
