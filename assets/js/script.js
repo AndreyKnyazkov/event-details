@@ -83,6 +83,7 @@ document.addEventListener("DOMContentLoaded", function () {
     function closePopUp() {
       eventSlider.classList.remove('fade-in')
       eventSlider.classList.add('fade-out')
+      document.querySelector('body').style.overflow = 'initial'
       popUpSlider({destroy: true})
     }
 
@@ -93,6 +94,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     sliderItemsToClick.forEach((item, index) => {
       item.addEventListener('click', (e) => {
+        document.querySelector('body').style.overflow = 'hidden'
         eventSlider.classList.add('slider-event-active')
         eventSlider.classList.add('fade-in')
         popUpSlider({initialSlide: index})
