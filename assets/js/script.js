@@ -1,5 +1,14 @@
 document.addEventListener("DOMContentLoaded", function () {
 
+  function changeCoverImageHeightOnResize(params) {
+    document.querySelector('.event-cover__img img').style.minHeight = document.querySelector('.event-container').clientHeight + 'px'
+    window.addEventListener('resize', e => {
+      document.querySelector('.event-cover__img img').style.minHeight = document.querySelector('.event-container').clientHeight + 'px'
+    })
+  }
+
+  changeCoverImageHeightOnResize()
+
   function changeHeightForWhen() {
     document.querySelectorAll('.event-information__price__slider__when__timelist-item').forEach((item, i) => {
         if (item.clientHeight > 22) {
@@ -104,4 +113,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
   popUp()
   
+  function smoothScroll() {
+      $(document).on('click', 'a[href^="#"]', function (event) {
+        event.preventDefault();
+        try {
+        $('html, body').animate({
+          scrollTop: $($.attr(this, 'href')).offset().top
+        }, 500);
+        } catch (e) {
+          // console.log(e);
+        }
+      });
+  }
+  smoothScroll()
 });

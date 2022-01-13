@@ -76,6 +76,7 @@
   font-size: 16px;
   font-weight: 400;
   color: #169688!important;
+  text-decoration: none;
 }
 .event-cover__info__tags {
   display: flex;
@@ -128,11 +129,34 @@
   line-height: 24px;
   color: #BB6ADF;
 }
-.event-information__infoshare__share {
-  margin-right: 2px;
-  width: 150px;
-  text-align: right;
+.event-information__infoshare__share,
+.event-information__infoshare__share:hover,
+.event-information__infoshare__share:visited,
+.event-information__infoshare__share:hover {
+  cursor: pointer;
+  color: #169688;
+  font-size: 14px;
 }
+.event-information__infoshare__share a,
+.event-information__infoshare__share a:hover,
+.event-information__infoshare__share a:visited,
+.event-information__infoshare__share a:hover {
+  cursor: pointer;
+  color: #169688;
+  font-size: 14px;
+}
+.event-information__infoshare__info-item,
+.event-information__infoshare__info-item:hover,
+.event-information__infoshare__info-item:visited,
+.event-information__infoshare__info-item:hover {
+    color: #fff!important;
+    text-decoration: none;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #484848!important;
+    line-height: 24px;
+  }
 .event-information__infoshare__share span {
   font-size: 14px;
   color: #169688;
@@ -151,9 +175,20 @@
   font-size: 20px;
   line-height: 24px;
   font-weight: 400;
-  color: #484848;
   line-height: 24px;
 }
+.event-information__infoshare__info-item,
+.event-information__infoshare__info-item:hover,
+.event-information__infoshare__info-item:visited,
+.event-information__infoshare__info-item:hover {
+    color: #fff!important;
+    text-decoration: none;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #484848!important;
+    line-height: 24px;
+  }
 .event-information__price__title {
   font-size: 16px;
   font-weight: 600;
@@ -201,8 +236,17 @@
   font-size: 16px;
   margin-left: 11px;
 }
+.event-information__infoshare__share svg {
+  min-width: 19px;
+  min-height: 16px;
+}
 .event-information__info__forwhom__lang {
   margin-right: 12px;
+}
+.event-information__info__forwhom__lang {
+  display: flex;
+  width: 48%;
+  justify-content: end;
 }
 .event-information__info__forwhom__lang svg {
   margin-right: -2px;
@@ -317,6 +361,10 @@
   display: flex;
   margin-top: 15px;
   margin-left: -1px;
+}
+.event-information__where__geo svg {
+  min-width: 14px;
+  min-height: 20px;
 }
 .event-information__where__title {
   font-size: 32px;
@@ -467,6 +515,18 @@
   height: 520px;
   object-fit: cover;
 }
+.event-information__info__forwhom__people {
+  display: flex;
+  width: 48%;
+}
+.event-information__info__forwhom__people svg {
+  min-width: 28px;
+  min-height: 25px;
+}
+.event-information__info__forwhom__lang svg {
+  min-width: 28px;
+  min-height: 25px;
+}
 .event-information__info__forwhom__slidermobile {
   display: none;
 }
@@ -577,6 +637,27 @@
   transform: translateY(7px);
   text-align: center;
 }
+.event-cover__info__button {
+  width: 100%;
+  line-height: 19px;
+  background: #169688;
+  padding: 8px 0px;
+  text-align: center;
+  border-radius: 3px;
+  margin-top: 19px;
+  margin-bottom: 20px;
+}
+  .event-cover__info__button a,
+  .event-cover__info__button a:hover,
+  .event-cover__info__button a:visited,
+  .event-cover__info__button a:hover {
+    color: #fff!important;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 600;
+    line-height: 19.07px;
+    font-size: 14px;
+  }
 @media (max-width: 1200px) {
   .event-cover__img, .event-cover__img img {
     width: 650px;
@@ -669,9 +750,7 @@
   }
   .event-information__info__forwhom__people {
     flex-direction: column;
-  }
-  .event-information__info__forwhom__lang {
-    flex-direction: column;
+    width: 48%;
   }
   .event-information__info__forwhom__people span, .event-information__info__forwhom__lang span {
     font-size: 16px;
@@ -710,6 +789,7 @@
     margin-right: 12px;
     color: #484848;
     font-size: 16px;
+    line-height: 22px;
   }
   .event-information__info__forwhom__pricemobile {
     display: block;
@@ -720,6 +800,12 @@
     margin-bottom: -19px;
     line-height: 22px;
   }
+  .event-information__info__forwhom__lang {
+  display: flex;
+  width: 48%;
+  justify-content: end;
+  flex-direction: column;
+}
   .event-information__info__forwhom__slidermobile {
     margin-top: 20px;
     display: block;
